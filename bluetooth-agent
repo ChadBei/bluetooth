@@ -30,7 +30,7 @@ DEFAULT_INTERFACE = os.getenv("HCI_INTERFACE", "hci0")
 DEFAULT_PIN_CODE = os.getenv("PIN_CODE", "0000")
 
 # Other settings
-RECONNECT_MAX_RETRIES = os.getenv("RECONNECT_MAX_RETRIES", 5)
+RECONNECT_MAX_RETRIES = int(os.getenv("RECONNECT_MAX_RETRIES", 5))
 
 # DBus helper functions
 def dbus_get_interface(bus_name, object_name, interface_name):
